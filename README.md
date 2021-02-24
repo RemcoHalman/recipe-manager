@@ -9,7 +9,8 @@ Recipe manager API to create a acces route to personal diner/baking recipe's. We
 
 ```
 Recipe Manager (dockerized)
-├─── web (Flask API)
-└─── app (Mobile App)
-└─── db
+├─── api (Flask API)
+├─── web (Vue frontend)
+├─── app (Mobile App (dart))
+└─── db (mongodb)
 ```
