@@ -1,0 +1,22 @@
+version: "3.7"
+services:
+  api:
+    build: api
+    container_name: recipe-manager-api
+    restart: always
+
+  app:
+    build: app
+    container_name: recipe-manager-app
+    restart: always
+
+  web:
+    build: web
+    container_name: recipe-manager-web
+    restart: always
+    ports:
+      - 80:80
+
+  db:
+    build: db
+    container_name: recipe-manager-db
