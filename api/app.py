@@ -1,3 +1,3 @@
 print("Test")
-#TODO : Test title
-#BODY : test body
+# TODO: Test title
+# BODY: test body
