@@ -1,22 +1,37 @@
 version: "3.7"
 services:
-  api:
-    build: api
-    container_name: recipe-manager-api
-    restart: always
+  # api:
+  #   build: api
+  #   container_name: recipe-manager-api
+  #   restart: always
+  #   networks: recipe-manager
 
-  app:
-    build: app
-    container_name: recipe-manager-app
-    restart: always
+  # app:
+  #   build: app
+  #   container_name: recipe-manager-app
+  #   restart: always
+  #   networks: recipe-manager
 
-  web:
-    build: web
-    container_name: recipe-manager-web
-    restart: always
-    ports:
-      - 80:80
+  # web:
+  #   build: web
+  #   container_name: recipe-manager-web
+  #   restart: always
+  #   networks: recipe-manager
+  #   ports:
+  #     - 80:80
 
   db:
-    build: db
     container_name: recipe-manager-db
+    image: mongo
+    environment:
+      MONGO_INITDB_DATABASE: "recipe-manager-db"
+      MONGO_INITDB_ROOT_USERNAME: "Remco"
+      MONGO_INITDB_ROOT_PASSWORD: "Remco123"
+    volumes:
+      - "./db:/data/db"
+    ports:
+      - "27017:27017"
+    networks: ["recipe-manager"]
+
+networks:
+  recipe-manager:
