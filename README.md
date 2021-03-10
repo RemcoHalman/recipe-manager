@@ -10,7 +10,7 @@ Recipe manager API to create a acces route to personal diner/baking recipe's. We
 ```
 Recipe Manager (dockerized)
 ├─── api (Django API)
+├─────── Database
 ├─── web (Vue frontend)
 ├─── app (Mobile App (dart))
-└─── db (mongodb)
 ```
