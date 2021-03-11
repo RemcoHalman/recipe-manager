@@ -25,14 +25,13 @@ SECRET_KEY = 'v8id$@q8yi55+^^f@)xd%6pm)%!v2k77lb63f$q8kb5c7q4ngz'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*',]
 
 
 # Application definition
 
 INSTALLED_APPS = [
-    'apps.food',
-    'apps.baking',
+    'apps.recipe',
     'rest_framework',
     'django.contrib.admin',
     'django.contrib.auth',
