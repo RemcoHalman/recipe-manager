@@ -18,10 +18,7 @@ class Baking(models.Model):
     recipe = models.ForeignKey(Recipe, on_delete=models.CASCADE)
     oven = models.CharField(max_length=10, choices=OVEN_CHOICES, default='hetelucht')
     degrees = models.IntegerField(help_text="Hoeveelheid graden")
-    oven_time = models.DurationField(help_text="Tijdsduur in de oven hh:mm:ss")
-
-    def __str__(self):
-        return self.recipe
+    oven_time = models.TimeField(help_text="Tijdsduur in de oven hh:mm:ss")
     
 # Create your models here.
 # Baking

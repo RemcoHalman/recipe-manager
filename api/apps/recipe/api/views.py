@@ -1,5 +1,5 @@
 from django.shortcuts import render, HttpResponse
-from .models import Recipe, Baking
+from ..models import Recipe, Baking
 from .serializers import RecipeSerializer, BakingSerializer
 from rest_framework import viewsets, permissions
 
@@ -10,4 +10,10 @@ class RecipeViewSet(viewsets.ModelViewSet):
     """
     queryset = Recipe.objects.all()
     serializer_class = RecipeSerializer
-    permission_classes = [permissions.IsAuthenticated]
+
+class BakingViewSet(viewsets.ModelViewSet):
+    """
+    API endpoint that allows Baking to be viewed or edited.
+    """
+    queryset = Baking.objects.all()
+    serializer_class = BakingSerializer
