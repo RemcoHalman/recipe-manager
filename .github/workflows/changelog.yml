@@ -16,7 +16,9 @@ jobs:
         uses: TriPSs/conventional-changelog-action@v3
         with:
           github-token: ${{ secrets.github_token }}
-          output-file: "true"
+          output-file: "CHANGELOG.md"
+          version-file: './version.json'
+
 
       - name: Create Release
         uses: actions/create-release@v1
